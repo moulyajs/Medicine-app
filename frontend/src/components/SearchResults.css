@@ -1,0 +1,229 @@
+.search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    
+  }
+  
+  .filtered-medicines {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+  }
+  
+  .filtered-medicine-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .filtered-medicine-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .medicine-info {
+   display: flex;
+    flex-direction: column;
+    width: 1100px;
+    height: 900px;
+    max-width: 1100px;
+    border: 1px solid #ddd;
+   padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    background-color: #ffffff;
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .medicine-header {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .medicine-image {
+    flex: 1;
+    max-width: 300px;
+    margin-left: 100px;
+  }
+  
+  .medicine-details {
+    flex: 2;
+    padding-left: 20px;
+    margin-left: 100px;
+  }
+  
+  .medicine-details h3 ,h4 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .medicine-details .price {
+    font-size: 20px;
+    color: #4CAF50;
+   margin-top: 5px;
+  }
+  
+  
+  
+  .medicine-details .quantity {
+    font-size: 16px;
+    color: #666;
+    margin-top: 8px;
+  }
+  
+  .medicine-extra-info {
+    margin-top: 20px;
+    background-color: #ffffff;
+  }
+  
+  .medicine-extra-info h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    color: #333;
+  }
+  
+  .medicine-extra-info p,
+  .medicine-extra-info ul {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+    margin-left: 100px;
+  }
+  
+  .medicine-extra-info ul {
+    padding-left: 20px;
+    margin-left: 100px;
+  }
+  .add-to-cart-button {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 25px; /* Space above the button */
+  }
+  
+  .add-to-cart-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+ 
+  .add-review {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .add-review h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .add-review textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    margin-bottom: 10px;
+  }
+  
+  .add-review select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+  }
+  
+  .add-review button {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .add-review button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Displayed Reviews Styling */
+  
+  .medicine-extra-info .reviews-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .medicine-extra-info .reviews-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+  }
+  
+  .medicine-extra-info .reviews-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .review-user {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #555;
+  }
+  
+  .review-comment {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+  }
+  
+  .review-rating {
+    display: inline-flex;
+    color: gold;
+    font-size: 16px;
+  }
+  .star {
+    color: gold;
+    font-size: 1.2em;
+    margin-right: 2px;
+  }
+  .add-review{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .button-group {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 25px; /* Space above the button group */
+  }
+  
+  .view-cart-button {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 25px; /* Space above the button */
+  }
+  
+  .view-cart-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
