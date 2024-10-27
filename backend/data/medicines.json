@@ -7,7 +7,7 @@
           "description": "Paracetamol is used to treat mild to moderate pain and reduce fever.",
           "warnings": "Avoid taking more than the recommended dose. Consult your doctor if you have liver disease.",
           "precautions": "Keep out of reach of children",
-          "image": "images/paracetamol.png",
+          "image": "/images/paracetamol.png",
           "reviews": [
             {
               "user": "John Doe",
@@ -30,7 +30,7 @@
           "description": "Ibuprofen is used for relief from pain, inflammation, and fever.",
           "warnings": "Avoid use in cases of heart disease, stomach ulcers, or kidney issues.",
           "precautions": "Take with food to avoid stomach irritation. Do not exceed the recommended dose.",
-          "image": "images/ibuprofen.png",
+          "image": "/images/ibuprofen.png",
           "reviews": [
             {
               "user": "David Wilson",
@@ -53,7 +53,7 @@
           "description": "Amoxicillin is used to treat bacterial infections such as pneumonia and ear infections.",
           "warnings": "Not effective for viral infections. Allergic reactions may occur.",
           "precautions": "Complete the full course of medication even if symptoms improve. Inform the doctor if allergic to penicillin.",
-          "image": "images/amoxicillin.png",
+          "image": "/images/amoxicillin.png",
           "reviews": [
             {
               "user": "Tom Brown",
@@ -76,7 +76,7 @@
           "description": "Cetirizine is used to relieve allergy symptoms such as watery eyes, runny nose, and sneezing.",
           "warnings": "May cause drowsiness. Avoid driving after taking.",
           "precautions": "Consult your doctor if pregnant or breastfeeding. Avoid alcohol consumption.",
-          "image": "images/cetirizine.png",
+          "image": "/images/cetirizine.png",
           "reviews": [
             {
               "user": "Emily Clark",
@@ -99,7 +99,7 @@
           "description": "Metformin is used to control blood sugar levels in people with type 2 diabetes.",
           "warnings": "Can cause low blood sugar when combined with insulin or other medications.",
           "precautions": "Take with meals to reduce stomach discomfort. Monitor blood sugar regularly.",
-          "image": "images/metformin.png",
+          "image": "/images/metformin.png",
           "reviews": [
             {
               "user": "John Evans",
@@ -122,7 +122,7 @@
           "description": "Lisinopril is used to treat high blood pressure and heart failure.",
           "warnings": "May cause dizziness or lightheadedness, especially after the first dose.",
           "precautions": "Stay hydrated and avoid getting overheated. Monitor blood pressure regularly.",
-          "image": "images/lisinopril.png",
+          "image": "/images/lisinopril.png",
           "reviews": [
             {
               "user": "Paul Garcia",
@@ -145,7 +145,7 @@
           "description": "Atorvastatin is used to lower cholesterol and reduce the risk of heart disease.",
           "warnings": "May cause muscle pain or weakness. Consult your doctor if you experience unusual muscle pain.",
           "precautions": "Follow a low-fat diet along with medication. Regularly check liver function tests.",
-          "image": "images/atorvastatin.png",
+          "image": "/images/atorvastatin.png",
           "reviews": [
             {
               "user": "Greg Allen",
@@ -168,7 +168,7 @@
           "description": "Amlodipine is used to treat high blood pressure and chest pain (angina).",
           "warnings": "May cause swelling of the ankles or feet. Avoid alcohol while taking this medication.",
           "precautions": "Monitor blood pressure regularly. Avoid standing up too quickly to prevent dizziness.",
-          "image": "images/amlodipine.png",
+          "image": "/images/amlodipine.png",
           "reviews": [
             {
               "user": "Chris King",
@@ -191,7 +191,7 @@
           "description": "Omeprazole is used to reduce stomach acid and treat conditions such as GERD.",
           "warnings": "Long-term use may lead to low magnesium levels.",
           "precautions": "Take before meals. Do not crush or chew the tablet.",
-          "image": "images/omeprazole.png",
+          "image": "/images/omeprazole.png",
           "reviews": [
             {
               "user": "Daniel Adams",
@@ -214,7 +214,7 @@
           "description": "Levothyroxine is used to treat an underactive thyroid (hypothyroidism).",
           "warnings": "Do not stop taking this medication without consulting your doctor.",
           "precautions": "Take on an empty stomach. Do not take with antacids or iron supplements within 4 hours.",
-          "image": "images/levothyroxine.png",
+          "image": "/images/levothyroxine.png",
           "reviews": [
             {
               "user": "Susan Rodriguez",
@@ -237,7 +237,7 @@
           "description": "Losartan is used to treat high blood pressure and protect the kidneys from damage due to diabetes.",
           "warnings": "May cause dizziness. Avoid potassium supplements unless advised by a doctor.",
           "precautions": "Monitor blood pressure regularly. Drink plenty of fluids.",
-          "image": "images/losartan.png",
+          "image": "/images/losartan.png",
           "reviews": [
             {
               "user": "Patricia Moore",
@@ -260,7 +260,7 @@
           "description": "Simvastatin is used to lower cholesterol and triglycerides in the blood.",
           "warnings": "May cause liver problems. Notify your doctor if you have unexplained muscle pain.",
           "precautions": "Avoid eating grapefruit while taking this medication.",
-          "image": "images/simvastatin.png",
+          "image": "/images/simvastatin.png",
           "reviews": [
             {
               "user": "Barbara Thompson",
@@ -283,7 +283,7 @@
           "description": "Prednisone is used to treat inflammation, allergies, and immune system disorders.",
           "warnings": "Long-term use may lead to bone loss and weight gain.",
           "precautions": "Take with food to prevent stomach irritation. Do not stop suddenly without consulting your doctor.",
-          "image": "images/prednisone.png",
+          "image": "/images/prednisone.png",
           "reviews": [
             {
               "user": "Linda Walker",
@@ -306,7 +306,7 @@
           "description": "Warfarin is used to prevent blood clots in patients with heart conditions.",
           "warnings": "Can cause bleeding. Regular blood tests are required to monitor INR levels.",
           "precautions": "Avoid foods high in vitamin K (like leafy greens). Inform your doctor of any new medications.",
-          "image": "images/warfarin.png",
+          "image": "/images/warfarin.png",
           "reviews": [
             {
               "user": "Deborah Hall",
@@ -329,7 +329,7 @@
           "description": "Hydrochlorothiazide is used to treat high blood pressure and fluid retention (edema).",
           "warnings": "May cause dehydration and electrolyte imbalance.",
           "precautions": "Monitor kidney function and electrolytes regularly.",
-          "image": "images/hydrochlorothiazide.png",
+          "image": "/images/hydrochlorothiazide.png",
           "reviews": [
             {
               "user": "Michael Scott",

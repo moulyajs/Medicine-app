@@ -1,55 +1,89 @@
 const express = require('express');
 const fs = require('fs');
+const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 9000;
 
 // Middleware
-app.use(cors()); // Enable CORS
-app.use(bodyParser.json()); // Parse JSON bodies
+app.use(cors());
+app.use(bodyParser.json());
+//app.use(express.static('backend/public'));
+app.use('/images', express.static('public/images'));
+// Load the medicine data
+let medicineData = require(path.join(__dirname, 'data', 'medicines.json'));
 
-// Load medicine data from JSON file
-let medicineData = require('./data/medicines.json'); // Update the path to medicines.json
 
-// Endpoint to search for a medicine
-app.get('/api/medicines/:name', (req, res) => {
-    const medicineName = req.params.name.toLowerCase();
-    const medicine = medicineData.find(m => m.name.toLowerCase() === medicineName);
-    
-    if (medicine) {
-        res.json(medicine);
+// Root route
+app.get('/', (req, res) => {
+    res.send('Welcome to the Medicine API');
+});
+
+// Endpoint to get all medicines (for initial loading in the frontend)
+app.get("/api/medicines", (req, res) => {
+    res.status(200).json({
+        success: true,
+        data: medicineData.medicines
+    });
+});
+
+// Endpoint to search for a specific medicine by name
+app.get("/api/medicines/:name", (req, res) => {
+    const { name } = req.params;
+
+    // Search for medicines that match the query
+    const medicines = medicineData.medicines.filter(med =>
+        med.name.toLowerCase().includes(name.toLowerCase())
+    );
+
+    if (medicines.length > 0) {
+        res.status(200).json({
+            success: true,
+            data: medicines
+        });
     } else {
-        res.status(404).json({ message: 'Medicine not found' });
+        res.status(404).json({
+            success: false,
+            message: 'Medicine not found'
+        });
     }
 });
 
-// Endpoint to update reviews for a medicine
+// Endpoint to update reviews for a specific medicine
 app.post('/api/medicines/:name/reviews', (req, res) => {
     const medicineName = req.params.name.toLowerCase();
-    const review = req.body.review;
+    const { review } = req.body;
 
-    const medicine = medicineData.find(m => m.name.toLowerCase() === medicineName);
+    // Find the specific medicine by name
+    const medicine = medicineData.medicines.find(m =>
+        m.name.toLowerCase() === medicineName
+    );
 
     if (medicine) {
-        // If a review is provided, add it to the reviews array
+        // Add review if provided
         if (review) {
-            if (!medicine.reviews) {
-                medicine.reviews = []; // Initialize reviews if not present
-            }
+            medicine.reviews = medicine.reviews || [];
             medicine.reviews.push(review);
 
-            // Save updated data back to the JSON file
-            fs.writeFile('./data/medicines.json', JSON.stringify(medicineData, null, 2), (err) => { // Update the path to save
-                if (err) {
-                    return res.status(500).json({ message: 'Error saving review' });
+            // Save updated data to JSON file
+            fs.writeFile(
+                path.join(__dirname, 'data', 'medicines.json'),
+                JSON.stringify(medicineData, null, 2),
+                (err) => {
+                    if (err) {
+                        return res.status(500).json({ message: 'Error saving review' });
+                    }
+                    res.status(200).json({
+                        success: true,
+                        message: 'Review added successfully',
+                        reviews: medicine.reviews
+                    });
                 }
-                res.status(200).json({ message: 'Review added successfully', reviews: medicine.reviews });
-            });
+            );
         } else {
-            // If no review is provided, just respond positively without saving
-            res.status(200).json({ message: 'No review submitted. Medicine details retrieved.', reviews: medicine.reviews || [] });
+            res.status(400).json({ message: 'No review provided' });
         }
     } else {
         res.status(404).json({ message: 'Medicine not found' });
