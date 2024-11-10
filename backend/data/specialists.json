@@ -1,0 +1,251 @@
+[
+    {
+      "specialty": "Dermatology",
+      "description": "Treats skin, hair, and nail conditions.",
+      "conditions": [
+        "Acne",
+        "Eczema",
+        "Psoriasis",
+        "Skin Cancer",
+        "Rosacea",
+        "Vitiligo"
+      ],
+      "image": "/images/dermatology.png",
+      "doctors": [
+        {
+          "name": "Dr. Alice Smith",
+          "qualification": "MBBS, MD Dermatology",
+          "available_time": "Today, 9:00 AM - 5:00 PM",
+          "years_of_experience": 10,
+          "image": "/images/doctor1.png"
+        },
+        {
+          "name": "Dr. John Doe",
+          "qualification": "MBBS, DNB Dermatology",
+          "available_time": "Today, 10:00 AM - 6:00 PM",
+          "years_of_experience": 8,
+          "image": "/images/doctor2.png"
+        }
+      ]
+    },
+    {
+      "specialty": "Cardiology",
+      "description": "Focuses on heart and blood vessel health.",
+      "conditions": [
+        "Heart Disease",
+        "Hypertension",
+        "Angina",
+        "Arrhythmia",
+        "Heart Attack"
+      ],
+      "image": "/images/cardiology.png",
+      "doctors": [
+        {
+          "name": "Dr. Emma Williams",
+          "qualification": "MBBS, MD Cardiology",
+          "available_time": "Today, 8:00 AM - 4:00 PM",
+          "years_of_experience": 12,
+          "image": "/images/doctor3.png"
+        },
+        {
+          "name": "Dr. David Johnson",
+          "qualification": "MBBS, DNB Cardiology",
+          "available_time": "Today, 11:00 AM - 7:00 PM",
+          "years_of_experience": 9,
+          "image": "/images/doctor4.png"
+        }
+      ]
+    },
+    {
+      "specialty": "Neurology",
+      "description": "Deals with nervous system disorders.",
+      "conditions": [
+        "Stroke",
+        "Parkinson's Disease",
+        "Epilepsy",
+        "Alzheimer's Disease",
+        "Migraines"
+      ],
+      "image": "/images/neurology.png",
+      "doctors": [
+        {
+          "name": "Dr. Michael Brown",
+          "qualification": "MBBS, MD Neurology",
+          "available_time": "Today, 9:00 AM - 6:00 PM",
+          "years_of_experience": 15,
+          "image": "/images/doctor5.png"
+        },
+        {
+          "name": "Dr. Sarah Lee",
+          "qualification": "MBBS, DNB Neurology",
+          "available_time": "Today, 10:00 AM - 5:00 PM",
+          "years_of_experience": 7,
+          "image": "/images/doctor6.png"
+        }
+      ]
+    },
+    {
+      "specialty": "Pediatrics",
+      "description": "Specializes in children's health.",
+      "conditions": [
+        "Asthma",
+        "Ear Infections",
+        "Vaccination",
+        "Childhood Obesity"
+      ],
+      "image": "/images/pediatrics.png",
+      "doctors": [
+        {
+          "name": "Dr. Jessica Taylor",
+          "qualification": "MBBS, MD Pediatrics",
+          "available_time": "Today, 9:00 AM - 4:00 PM",
+          "years_of_experience": 6,
+          "image": "/images/doctor1.png"
+        },
+        {
+          "name": "Dr. William Harris",
+          "qualification": "MBBS, DNB Pediatrics",
+          "available_time": "Today, 10:00 AM - 6:00 PM",
+          "years_of_experience": 5,
+          "image": "/images/doctor2.png"
+        }
+      ]
+    },
+    {
+      "specialty": "Orthopedics",
+      "description": "Treats bones, joints, and muscles.",
+      "conditions": [
+        "Fractures",
+        "Arthritis",
+        "Back Pain",
+        "Sports Injuries"
+      ],
+      "image": "/images/orthopedics.png",
+      "doctors": [
+        {
+          "name": "Dr. Lucas Evans",
+          "qualification": "MBBS, MS Orthopedics",
+          "available_time": "Today, 8:00 AM - 4:00 PM",
+          "years_of_experience": 13,
+          "image": "/images/doctor3.png"
+        },
+        {
+          "name": "Dr. Olivia Scott",
+          "qualification": "MBBS, DNB Orthopedics",
+          "available_time": "Today, 10:00 AM - 6:00 PM",
+          "years_of_experience": 9,
+          "image": "/images/doctor4.png"
+        }
+      ]
+    },
+    {
+      "specialty": "Psychiatry",
+      "description": "Focuses on mental health and disorders.",
+      "conditions": [
+        "Depression",
+        "Anxiety",
+        "Bipolar Disorder",
+        "PTSD",
+        "ADHD"
+      ],
+      "image": "/images/psychiatry.png",
+      "doctors": [
+        {
+          "name": "Dr. Maria Wilson",
+          "qualification": "MBBS, MD Psychiatry",
+          "available_time": "Today, 9:00 AM - 5:00 PM",
+          "years_of_experience": 11,
+          "image": "/images/doctor5.png"
+        },
+        {
+          "name": "Dr. James White",
+          "qualification": "MBBS, DNB Psychiatry",
+          "available_time": "Today, 11:00 AM - 7:00 PM",
+          "years_of_experience": 6,
+          "image": "/images/doctor6.png"
+        }
+      ]
+    },
+    {
+      "specialty": "Gynecology",
+      "description": "Focuses on women's reproductive health.",
+      "conditions": [
+        "Menstrual Disorders",
+        "PCOS",
+        "Pregnancy Issues",
+        "Menopause"
+      ],
+      "image": "/images/gynecology.png",
+      "doctors": [
+        {
+          "name": "Dr. Ava Martin",
+          "qualification": "MBBS, MD Gynecology",
+          "available_time": "Today, 9:00 AM - 5:00 PM",
+          "years_of_experience": 8,
+          "image": "/images/doctor1.png"
+        },
+        {
+          "name": "Dr. Sophia Clark",
+          "qualification": "MBBS, DNB Gynecology",
+          "available_time": "Today, 10:00 AM - 6:00 PM",
+          "years_of_experience": 5,
+          "image": "/images/doctor2.png"
+        }
+      ]
+    },
+    {
+      "specialty": "Gastroenterology",
+      "description": "Treats digestive system disorders.",
+      "conditions": [
+        "IBS",
+        "GERD",
+        "Ulcerative Colitis",
+        "Hepatitis"
+      ],
+      "image": "/images/gastroenterology.png",
+      "doctors": [
+        {
+          "name": "Dr. Henry Walker",
+          "qualification": "MBBS, MD Gastroenterology",
+          "available_time": "Today, 9:00 AM - 5:00 PM",
+          "years_of_experience": 14,
+          "image": "/images/doctor3.png"
+        },
+        {
+          "name": "Dr. Evelyn King",
+          "qualification": "MBBS, DNB Gastroenterology",
+          "available_time": "Today, 10:00 AM - 6:00 PM",
+          "years_of_experience": 10,
+          "image": "/images/doctor4.png"
+        }
+      ]
+    },
+    {
+      "specialty": "Ophthalmology",
+      "description": "Specializes in eye health and vision.",
+      "conditions": [
+        "Cataracts",
+        "Glaucoma",
+        "Macular Degeneration",
+        "Dry Eyes"
+      ],
+      "image": "/images/ophthalmology.png",
+      "doctors": [
+        {
+          "name": "Dr. Noah Allen",
+          "qualification": "MBBS, MS Ophthalmology",
+          "available_time": "Today, 8:00 AM - 4:00 PM",
+          "years_of_experience": 9,
+          "image": "/images/doctor5.png"
+        },
+        {
+          "name": "Dr. Lily Adams",
+          "qualification": "MBBS, DNB Ophthalmology",
+          "available_time": "Today, 10:00 AM - 6:00 PM",
+          "years_of_experience": 7,
+          "image": "/images/doctor6.png"
+        }
+      ]
+    }
+  ]
+  
