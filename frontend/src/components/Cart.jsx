@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import "./Cart.css";
+import "./CSS/Cart.css";
 import { addToCart, clearCart, decreaseCart, getTotals, removeFromCart } from "../features/CartSlice";
 import { useEffect } from "react";
 
@@ -36,7 +36,7 @@ const Cart = () => {
                 <div className="cart-empty">
                     <p>Your cart is currently empty</p>
                     <div className="go-to-main-page">
-                        <Link to="/">
+                        <Link to="/home">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="20"
@@ -67,7 +67,7 @@ const Cart = () => {
                             <div className="cart-item" key={cartItem._id}>
                                 <div className="cart-product">
                                     <img
-                                        src={`http://localhost:9000${cartItem.image}`}
+                                        src={`http://localhost:5000${cartItem.image}`}
                                         alt={cartItem.name}
                                     />
                                     <div>

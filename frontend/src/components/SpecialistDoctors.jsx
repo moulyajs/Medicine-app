@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./SpecialistDoctors.css";
+import "./CSS/SpecialistDoctors.css";
 
 const SpecialistDoctors = () => {
     const { specialistId } = useParams();
@@ -15,7 +15,7 @@ const SpecialistDoctors = () => {
         // Fetch doctors by specialist
         const fetchDoctors = async () => {
             try {
-                const response = await fetch(`http://localhost:9000/api/specialists/${specialistId}/doctors`);
+                const response = await fetch(`http://localhost:5000/api/specialists/${specialistId}/doctors`);
                 if (!response.ok) {
                     throw new Error("Failed to fetch doctors");
                 }
@@ -58,7 +58,7 @@ const SpecialistDoctors = () => {
         <div className="doctors-container">
             {doctors.map((doctor) => (
                 <div className="doctor-card" key={doctor._id}>
-                    <img src={`http://localhost:9000${doctor.image}`} alt={doctor.name} className="doctor-image" />
+                    <img src={`http://localhost:5000${doctor.image}`} alt={doctor.name} className="doctor-image" />
                     <div className="doctor-info">
                         <h3>{doctor.name}</h3>
                         <p>{doctor.qualification}</p>

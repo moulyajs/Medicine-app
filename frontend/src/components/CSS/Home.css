@@ -1,0 +1,119 @@
+/* Home.css */
+
+.homepg-body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.homepg-body .homepage {
+  text-align: center;
+  padding: 2rem;
+}
+
+.homepg-body .homepage h1 {
+  font-size: 2.5rem;
+  color: #1d3557;
+  margin-bottom: 1rem;
+}
+
+.homepg-body .homepage p {
+  font-size: 1.2rem;
+  color: #457b9d;
+  margin-bottom: 2rem;
+}
+
+.homepg-body .search-bar {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #1d3557;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 505px;
+  transition: background-color 0.3s ease;
+}
+
+.homepg-body .search-bar:hover {
+  background-color: #457b9d;
+}
+
+
+.homepg-body .feature-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.homepg-body .feature-buttons button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #1d3557;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.homepg-body .feature-buttons button:hover {
+  background-color: #457b9d;
+}
+
+.homepg-body .featured-products,
+.homepg-body .health-tips,
+.homepg-body .side-effects-checker,
+.homepg-body .informational-videos,
+.homepg-body .consultation-history,
+.homepg-body .newsletter-archive {
+  background-color: #e9f1f7;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homepg-body .featured-products h2,
+.homepg-body .health-tips h2,
+.homepg-body .side-effects-checker h2,
+.homepg-body .informational-videos h2,
+.homepg-body .consultation-history h2,
+.homepg-body .newsletter-archive h2 {
+  color: #1d3557;
+  margin-bottom: 5px;
+}
+
+.homepg-body .product {
+  background-color: #f1faee;
+  padding: 0.8rem;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.homepg-body .side-effects-checker input {
+  width: 95%;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #bcd4e6;
+}
+
+.homepg-body .video-placeholder {
+  width: 90%;
+  padding: 2rem;
+  background-color: #f1faee;
+  border-radius: 5px;
+  color: #777;
+  text-align: center;
+  font-size: 1rem;
+}

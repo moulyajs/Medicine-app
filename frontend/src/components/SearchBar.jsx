@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./SearchBar.css";
+import "./CSS/SearchBar.css";
 import { FaSearch } from 'react-icons/fa';
 
 export const SearchBar = ({ onSearch }) => {

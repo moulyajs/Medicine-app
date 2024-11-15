@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { clearCart } from "../features/CartSlice"; // Import the action
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-import "./CheckOut.css"; // Add your styles for the checkout page
+import "./CSS/CheckOut.css"; // Add your styles for the checkout page
 
 const CheckOut = () => {
     const [formData, setFormData] = useState({
