@@ -10,7 +10,7 @@ const InformationalVideo = require('./models/InfoVideos');
 const FeaturedMed = require('./models/Products');
 
 router.get('/medications', verifyUser, (req, res) => {
-    const filePath = path.join(__dirname, '../public/dose_meds.json');
+    const filePath = path.join(__dirname, 'public', 'dose_meds.json');
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) 
         {

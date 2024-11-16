@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { clearCart } from "../features/CartSlice"; // Import the action
 import { useNavigate } from "react-router-dom"; // Import useNavigate
@@ -10,6 +10,12 @@ const CheckOut = () => {
         mobile: "",
         address: "",
     });
+
+    useEffect(() => {
+        document.body.classList.add('checkout-body');
+        return () => { document.body.classList.remove('checkout-body'); };
+    }, []);
+
     const [modalVisible, setModalVisible] = useState(false); // For showing the confirmation modal
     const dispatch = useDispatch();
     const navigate = useNavigate(); // Use useNavigate hook for navigation

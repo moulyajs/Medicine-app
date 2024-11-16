@@ -1,4 +1,4 @@
-.input-wrapper 
+.searchbar-body .input-wrapper 
 {
     /*background-color: white;*/
     width:70%;
@@ -14,7 +14,7 @@
     margin-left: 100px;
 }
 
-input 
+.searchbar-body input 
 {
     background-color:transparent ;
     border: none;
@@ -24,6 +24,6 @@ input
     margin-left: 5px;
 }
 
-input:focus{ outline:none; }
+.searchbar-body input:focus{ outline:none; }
 
-#search-icon { color: royalblue; }
+.searchbar-body #search-icon { color: royalblue; }

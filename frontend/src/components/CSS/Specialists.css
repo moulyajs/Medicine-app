@@ -1,16 +1,16 @@
 /* Specialists.css */
-.specialists-container {
+.specialists-body .specialists-container {
     padding: 20px;
     text-align: center;
 }
 
-.specialists-cards {
+.specialists-body .specialists-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.specialist-card {
+.specialists-body .specialist-card {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -19,42 +19,42 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.specialist-card:hover {
+.specialists-body .specialist-card:hover {
     transform: scale(1.05);
 }
 
-.specialist-card-content {
+.specialists-body .specialist-card-content {
     text-align: center;
 }
 
-.specialist-card-image {
+.specialists-body .specialist-card-image {
     width: 80%;
     height: 200px;
     border-radius: 8px;
 }
 
-.specialist-card h3 {
+.specialists-body .specialist-card h3 {
     font-size: 1.5rem;
     margin: 10px 0;
 }
-
-.specialist-card p {
+ 
+.specialists-body .specialist-card p {
     font-size: 1rem;
     color: #555;
     margin-bottom: 10px;
 }
 
-.specialist-card ul {
+.specialists-body .specialist-card ul {
     list-style-type: none;
     padding: 0;
 }
 
-.specialist-card ul li {
+.specialists-body .specialist-card ul li {
     font-size: 0.9rem;
     color: #777;
 }
 
-.specialist-card-link {
+.specialists-body .specialist-card-link {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
@@ -64,10 +64,10 @@
     text-decoration: none;
 }
 
-.specialist-card-link:hover {
+.specialists-body .specialist-card-link:hover {
     background-color: #0056b3;
 }
-.header{
+.specialists-body .header{
     padding: 30px;
     font-style: oblique;
    

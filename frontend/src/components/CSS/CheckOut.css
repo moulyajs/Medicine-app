@@ -1,30 +1,31 @@
-.checkout-container {
+.checkout-body .checkout-container 
+{
+
     padding: 20px;
     max-width: 600px;
     margin-top: 80px;
-   margin-left: auto;
-   margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #f8f9fa;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.checkout-form {
+.checkout-body .checkout-form {
     margin-bottom: 20px;
     
 }
 
-.form-group {
+.checkout-body .form-group {
     margin-bottom: 15px;
 }
 
-.form-group label {
+.checkout-body .form-group label {
     display: block;
     font-weight: bold;
 }
 
-.form-group input,
-.form-group textarea {
+.checkout-body .form-group input, .checkout-body .form-group textarea {
     width: 100%;
     padding: 8px;
     font-size: 14px;
@@ -32,12 +33,11 @@
     border: 1px solid #ddd;
 }
 
-.payment-method {
+.checkout-body .payment-method {
     margin: 15px 0;
 }
 
-.confirm-order-btn,
-.close-btn {
+.checkout-body .confirm-order-btn, .checkout-body .close-btn {
     padding: 12px 20px;
     background-color: #007bff;
     color: white;
@@ -47,12 +47,12 @@
     cursor: pointer;
 }
 
-.confirm-order-btn:hover,
-.close-btn:hover {
+.checkout-body .confirm-order-btn:hover,
+.checkout-body .close-btn:hover {
     background-color: #0056b3;
 }
 
-.modal {
+.checkout-body .modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -65,7 +65,7 @@
     z-index: 1000;
 }
 
-.modal-content {
+.checkout-body .modal-content {
     background-color: white;
     padding: 30px;
     border-radius: 8px;
@@ -73,7 +73,7 @@
     width: 400px;
 }
 
-.modal-close-btn {
+.checkout-body .modal-close-btn {
     background-color: #28a745;
     color: white;
     padding: 10px 20px;
@@ -82,6 +82,6 @@
     cursor: pointer;
 }
 
-.modal-close-btn:hover {
+.checkout-body .modal-close-btn:hover {
     background-color: #218838;
 }

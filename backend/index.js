@@ -11,12 +11,12 @@ const app = express();
 const Medicine = require("./models/Medicines");
 const Specialist = require("./models/Specialist");
 
-
 app.use(cors({
     origin: "http://localhost:3000",
     methods: 'GET,POST',
     credentials: true
 }));
+
 app.use(cookieParser());
 app.use(express.json());
 app.use('/api', require('./apiRoutes'));
@@ -31,7 +31,7 @@ mongoose.connect(mongoURI)
 const PORT = 5000; 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-app.post('/signup', (req, res) => {
+app.post('/signup', (req, res) => { 
     const { fullName, email, username, password } = req.body;
 
     signupModel.findOne({ $or: [{ email }, { username }] })

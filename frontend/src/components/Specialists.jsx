@@ -6,6 +6,11 @@ const Specialists = () => {
     const [specialists, setSpecialists] = useState([]);
 
     useEffect(() => {
+        document.body.classList.add('specialists-body');
+        return () => { document.body.classList.remove('specialists-body'); };
+    }, []);
+
+    useEffect(() => {
         // Fetch specialists from API
         const fetchSpecialists = async () => {
             try {

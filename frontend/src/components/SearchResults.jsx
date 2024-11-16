@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CSS/SearchResults.css";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,11 @@ import { addToCart } from "../features/CartSlice";
 const SearchResults = ({ filteredMedicines, onSelectMedicine, selectedMedicine, setSelectedMedicine }) => {
   const [newReview, setNewReview] = useState("");
   const [newRating, setNewRating] = useState(5);
+
+  useEffect(() => {
+    document.body.classList.add('searchresults-body');
+    return () => { document.body.classList.remove('searchresults-body'); };
+  }, []);
 
   const handleAddReview = () => {
     if (newReview && newRating) {

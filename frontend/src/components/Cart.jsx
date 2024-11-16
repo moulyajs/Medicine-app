@@ -11,6 +11,11 @@ const Cart = () => {
     useEffect(() => {
         dispatch(getTotals());
     }, [cart, dispatch]);
+    
+    useEffect(() => {
+        document.body.classList.add('cart-body');
+        return () => { document.body.classList.remove('cart-body'); };
+    }, []);
 
     const handleRemoveFromCart = (cartItem) => {
         dispatch(removeFromCart(cartItem));

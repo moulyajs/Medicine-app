@@ -12,6 +12,11 @@ const SpecialistDoctors = () => {
     const [modalVisible, setModalVisible] = useState(false);
 
     useEffect(() => {
+        document.body.classList.add('specialistdoctors-body');
+        return () => { document.body.classList.remove('specialistdoctors-body'); };
+    }, []);
+
+    useEffect(() => {
         // Fetch doctors by specialist
         const fetchDoctors = async () => {
             try {

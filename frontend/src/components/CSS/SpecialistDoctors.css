@@ -1,10 +1,10 @@
-.doctors-container {
+.specialistdoctors-body .doctors-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.doctor-card {
+.specialistdoctors-body .doctor-card {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
@@ -14,18 +14,18 @@
     width: 80%;
 }
 
-.doctor-image {
+.specialistdoctors-body .doctor-image {
     width: 100px;
     height: 100px;
     margin-right: 20px;
     border-radius: 50%;
 }
 
-.doctor-info {
+.specialistdoctors-body .doctor-info {
     flex-grow: 1;
 }
 
-.book-appointment-btn {
+.specialistdoctors-body .book-appointment-btn {
     background-color: #f04f5b;
     color: white;
     border: none;
@@ -34,39 +34,41 @@
     cursor: pointer;
 }
 
-.appointment-form {
+.specialistdoctors-body .appointment-form {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-}
+ }
 
-.appointment-form input {
+.specialistdoctors-body .appointment-form input {
     padding: 10px;
     margin: 5px 0;
     border: 1px black solid;
 }
-.submit-button {
+
+.specialistdoctors-body .submit-button {
     background-color:rgb(12, 232, 12);;
     width:400px;
     height: 30px;
-   
     margin: 10px;
 }
-.cancel-btn {
+
+.specialistdoctors-body .cancel-btn {
     background-color:rgb(12, 232, 12);
     width:400px;
     height: 30px;
     margin: 10px;
 }
-.submit-button:hover{
+
+.specialistdoctors-body .submit-button:hover{
     background-color: rgb(133, 240, 133);
 }
 
-.cancel-btn:hover{
+.specialistdoctors-body .cancel-btn:hover{
     background-color: rgb(133, 240, 133);
 }
 
-.modal {
+.specialistdoctors-body .modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -79,7 +81,7 @@
     z-index: 1000;
 }
 
-.modal-content {
+.specialistdoctors-body .modal-content {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -87,7 +89,7 @@
     width: 300px;
 }
 
-.modal-close-btn {
+.specialistdoctors-body .modal-close-btn {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -97,6 +99,7 @@
     margin-top: 10px;
 }
 
-.modal-close-btn:hover {
+.specialistdoctors-body .modal-close-btn:hover {
     background-color: #45a049;
 }
+ 

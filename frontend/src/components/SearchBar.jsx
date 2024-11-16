@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CSS/SearchBar.css";
 import { FaSearch } from 'react-icons/fa';
 
 export const SearchBar = ({ onSearch }) => {
   const [input, setInput] = useState("");
+
+  useEffect(() => {
+    document.body.classList.add('searchbar-body');
+    return () => { document.body.classList.remove('searchbar-body'); };
+  }, []);
 
   const handleInputChange = (event) => {
     const value = event.target.value;
