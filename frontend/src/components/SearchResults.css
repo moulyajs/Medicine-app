@@ -28,7 +28,7 @@
    display: flex;
     flex-direction: column;
     width: 1100px;
-    height: 900px;
+    height: 1200px;
     max-width: 1100px;
     border: 1px solid #ddd;
    padding: 20px;
@@ -214,16 +214,3 @@
     margin-top: 25px; /* Space above the button group */
   }
   
-  .view-cart-button {
-    background-color: #28a745; /* Green background */
-    color: white; /* White text */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 15px; /* Padding */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin-top: 25px; /* Space above the button */
-  }
-  
-  .view-cart-button:hover {
-    background-color: #218838; /* Darker green on hover */
-  }

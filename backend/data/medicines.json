@@ -1,7 +1,6 @@
-{
-    "medicines": [
+[
         {
-          "id": 1,
+          
           "name": "Paracetamol",
           "role": "Analgesic/Antipyretic",
           "description": "Paracetamol is used to treat mild to moderate pain and reduce fever.",
@@ -24,7 +23,7 @@
           "price": 25
         },
         {
-          "id": 2,
+         
           "name": "Ibuprofen",
           "role": "Nonsteroidal Anti-inflammatory Drug (NSAID)",
           "description": "Ibuprofen is used for relief from pain, inflammation, and fever.",
@@ -47,7 +46,7 @@
           "price": 40
         },
         {
-          "id": 3,
+         
           "name": "Amoxicillin",
           "role": "Antibiotic",
           "description": "Amoxicillin is used to treat bacterial infections such as pneumonia and ear infections.",
@@ -70,7 +69,7 @@
           "price": 60
         },
         {
-          "id": 4,
+        
           "name": "Cetirizine",
           "role": "Antihistamine",
           "description": "Cetirizine is used to relieve allergy symptoms such as watery eyes, runny nose, and sneezing.",
@@ -93,7 +92,7 @@
           "price": 30
         },
         {
-          "id": 5,
+          
           "name": "Metformin",
           "role": "Antidiabetic",
           "description": "Metformin is used to control blood sugar levels in people with type 2 diabetes.",
@@ -116,7 +115,7 @@
           "price": 55
         },
         {
-          "id": 6,
+         
           "name": "Lisinopril",
           "role": "ACE Inhibitor",
           "description": "Lisinopril is used to treat high blood pressure and heart failure.",
@@ -139,7 +138,7 @@
           "price": 45
         },
         {
-          "id": 7,
+          
           "name": "Atorvastatin",
           "role": "Cholesterol Lowering Agent",
           "description": "Atorvastatin is used to lower cholesterol and reduce the risk of heart disease.",
@@ -162,7 +161,7 @@
           "price": 50
         },
         {
-          "id": 8,
+         
           "name": "Amlodipine",
           "role": "Calcium Channel Blocker",
           "description": "Amlodipine is used to treat high blood pressure and chest pain (angina).",
@@ -185,7 +184,7 @@
           "price": 35
         },
         {
-          "id": 9,
+          
           "name": "Omeprazole",
           "role": "Proton Pump Inhibitor",
           "description": "Omeprazole is used to reduce stomach acid and treat conditions such as GERD.",
@@ -208,7 +207,7 @@
           "price": 40
         },
         {
-          "id": 10,
+          
           "name": "Levothyroxine",
           "role": "Thyroid Hormone",
           "description": "Levothyroxine is used to treat an underactive thyroid (hypothyroidism).",
@@ -231,7 +230,7 @@
           "price": 30
         },
         {
-          "id": 11,
+         
           "name": "Losartan",
           "role": "Angiotensin II Receptor Blocker",
           "description": "Losartan is used to treat high blood pressure and protect the kidneys from damage due to diabetes.",
@@ -254,7 +253,7 @@
           "price": 50
         },
         {
-          "id": 12,
+         
           "name": "Simvastatin",
           "role": "Cholesterol Lowering Agent",
           "description": "Simvastatin is used to lower cholesterol and triglycerides in the blood.",
@@ -277,7 +276,7 @@
           "price": 45
         },
         {
-          "id": 13,
+         
           "name": "Prednisone",
           "role": "Corticosteroid",
           "description": "Prednisone is used to treat inflammation, allergies, and immune system disorders.",
@@ -300,7 +299,7 @@
           "price": 35
         },
         {
-          "id": 14,
+         
           "name": "Warfarin",
           "role": "Anticoagulant",
           "description": "Warfarin is used to prevent blood clots in patients with heart conditions.",
@@ -323,7 +322,7 @@
           "price": 50
         },
         {
-          "id": 15,
+         
           "name": "Hydrochlorothiazide",
           "role": "Diuretic",
           "description": "Hydrochlorothiazide is used to treat high blood pressure and fluid retention (edema).",
@@ -347,4 +346,3 @@
         }
       ]
       
-}
