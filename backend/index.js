@@ -19,7 +19,7 @@ app.use(cors({
 
 app.use(cookieParser());
 app.use(express.json());
-app.use('/api', require('./apiRoutes'));
+
 app.use('/images', express.static('public/images'));
 
 const mongoURI = 'mongodb://localhost:27017/project'; 
@@ -89,14 +89,22 @@ app.post('/forgot-password', (req, res) => {
             const token = jwt.sign({ id: user._id }, "jwt_secret_key", { expiresIn: "10m" });
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
-                auth: { user: 'nrn061005@gmail.com', pass: 'your_email_password' }
+                auth: { user: 'nrn061005@gmail.com', pass: 'mjwv zkan vxji ahem' }
             });
 
             const mailOptions = {
                 from: 'nrn061005@gmail.com',
                 to: email,
                 subject: 'Dr.PillPilot - Reset your Password',
-                text: `http://localhost:3000/reset-password/${user._id}/${token}`
+                html: `
+                    <h1>Password Reset Request</h1>
+                    <p> Thank you for working with Dr.PillPilot!! </p>
+                    <p>Click the link below to reset your password. This link will expire in 10 minutes:</p>
+                    <a href="http://localhost:3000/reset-password/${user._id}/${token}">
+                        Reset Password
+                    </a>
+                    <p>If you did not request a password reset, you can ignore this email.</p>
+                `
             };
 
             transporter.sendMail(mailOptions, (error, info) => {
@@ -215,3 +223,4 @@ app.post('/logout', (req, res) => {
     res.clearCookie('token');  // Clear the JWT token cookie
     res.status(200).json({ message: "Logged out successfully" });
 });
+app.use('/api', require('./apiRoutes'));

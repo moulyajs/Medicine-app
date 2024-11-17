@@ -18,6 +18,7 @@ import CheckOut from "./components/CheckOut";
 import FAQ from "./components/FAQ";
 import MedicineSafetyChecker from "./components/MedicineSafetyChecker";
 import "./App.css"
+import ProfilePage from './components/ProfilePage';
 
 class App extends Component 
 {
@@ -54,7 +55,7 @@ class App extends Component
                     <Routes>
                         <Route path="/" element={<Main />} />
                         <Route path="/home" element={this.state.authenticated ? <HomePage /> : <Navigate to="/login" />} />
-                        <Route path="/account" element={this.state.authenticated ? <DosageCalculator /> : <Navigate to="/login" />} />
+                        <Route path="/account" element={this.state.authenticated ? <ProfilePage /> : <Navigate to="/login" />} />
                         <Route path="/login" element={this.state.authenticated ? <Navigate to="/home" /> : <Login onLoginSuccess={this.handleLoginSuccess} />} />
                         <Route path="/signup" element={<SignUp />} />
                         <Route path="/forgot-password" element={<ForgotPassword />} />

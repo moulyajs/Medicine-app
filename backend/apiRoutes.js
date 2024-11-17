@@ -180,4 +180,50 @@ router.post('/faqs/:id/feedback', async (req, res) => {
     }
 });
 
+// Route to fetch user profile
+router.get("/account", verifyUser, async (req, res) => {
+    try {
+        console.log("req.user:", req.user); // Log user data from verifyUser
+        if (!req.user || !req.user.id) {
+            return res.status(400).json({ message: "User is not authenticated or user ID is missing" });
+        }
+
+        const user = await User.findById(req.user.id, "-password");
+        if (!user) return res.status(404).json({ message: "User not found" });
+        console.log("succ in get")
+        res.json(user);
+    } catch (err) {
+        console.log("error")
+        console.error("Error fetching user:", err);
+        res.status(500).json({ message: "Server error" });
+    }
+});
+
+router.put("/account", verifyUser, async (req, res) => {
+    const { fullName, email, username, age, gender } = req.body;
+
+    try {
+        const user = await User.findById(req.user.id);
+        if (!user) return res.status(404).json({ message: "User not found" });
+
+        // Update the fields with new values
+        user.fullName = fullName || user.fullName;
+        user.email = email || user.email;
+        user.username = username || user.username;
+        
+        // Explicitly replace `age` and `gender` with what the user provides
+        user.age = age !== undefined ? age : user.age;
+        user.gender = gender !== undefined ? gender : user.gender;
+
+        // Save updated user to the database
+        await user.save();
+        console.log("succ input")
+        res.json({ message: "Profile updated successfully", user });
+    } catch (err) {
+        console.log("error in put")
+        console.error("Error updating profile:", err);
+        res.status(500).json({ message: "Server error" });
+    }
+});
+
 module.exports = router;
