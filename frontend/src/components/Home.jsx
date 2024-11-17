@@ -16,7 +16,7 @@ class HomePage extends Component
                 <h1>Welcome to Dr.PillPilot</h1>
                 <p>Your trusted online medicine management system.</p>
                 <SearchBar/> <FeatureButtons/> <FeaturedProducts/> <HealthTips/> 
-                <InformationalVideos/> <ConsultationHistory/> <NewsletterArchive/> <FAQ />
+                <InformationalVideos/> <NewsletterArchive/> <FAQ />
             </div>
         );
     }
@@ -135,29 +135,57 @@ class InformationalVideos extends Component
     }
 }
 
-class ConsultationHistory extends Component
+class NewsletterArchive extends Component 
 {
-    render()
+    constructor(props) 
     {
-        return(
-            <div className="consultation-history">
-                <h2>My Consultation History</h2>
-                <p>Consultation on 01/20/2022 - General Health</p>
-                <p>Consultation on 02/15/2022 - Pain Management</p>
-            </div>
-        );
+        super(props);
+        this.state = { randomNewsletters: [] };
     }
-}
 
-class NewsletterArchive extends Component
-{
-    render()
-    {
-        return(
+    async componentDidMount() {
+        try 
+        {
+            const response = await fetch('http://localhost:9000/api/newsletters');
+            const newsletters = await response.json();
+            console.log(response.json);
+
+            if (Array.isArray(newsletters) && newsletters.length > 1) 
+            {
+                const randomIndexes = [];
+                while (randomIndexes.length < 2) 
+                {
+                    const randomIndex = Math.floor(Math.random() * newsletters.length);
+                    if (!randomIndexes.includes(randomIndex)) randomIndexes.push(randomIndex);
+                }
+
+                const randomNewsletters = randomIndexes.map(index => newsletters[index]);
+                this.setState({ randomNewsletters });
+            } 
+            else this.setState({ randomNewsletters: newsletters }); 
+        } catch (error) { console.error("There was an error fetching the newsletters!", error); }
+    }
+
+    render() {
+        const { randomNewsletters } = this.state;
+
+        if (!Array.isArray(randomNewsletters)) return <p>Error: Invalid data received.</p>;
+
+        return (
             <div className="newsletter-archive">
                 <h2>Newsletter Archive</h2>
-                <p>January 2023 - Tips for Cold Season</p>
-                <p>February 2023 - Medication Safety</p>
+                {randomNewsletters.length === 0 ? (
+                    <p>No newsletters available</p>
+                ) : (
+                    randomNewsletters.map((newsletter, index) => (
+                        <div key={index}>
+                            <p>
+                                <a href={newsletter.link} target="_blank" rel="noopener noreferrer">{newsletter.name}</a> 
+                                - {newsletter.description}
+                            </p>
+                        </div>
+                    ))
+                )}
             </div>
         );
     }

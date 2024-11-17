@@ -117,3 +117,8 @@
   text-align: center;
   font-size: 1rem;
 }
+
+.homepg-body .newsletter-archive a { color: #197092; }
+.homepg-body .newsletter-archive a:hover { color: #197092; }
+.homepg-body .newsletter-archive a:active { color: #1d3557; }
+.homepg-body .newsletter-archive a:visited { color: #197092; }

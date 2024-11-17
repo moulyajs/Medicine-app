@@ -10,6 +10,7 @@ const InformationalVideo = require('./models/InfoVideos');
 const FeaturedMed = require('./models/Products');
 const FAQ = require('./models/tempfaqs');
 const Medication = require('./models/Medication');
+const Newsletter = require("./models/Newsletters");
 
 router.get('/medications', verifyUser, (req, res) => {
     const filePath = path.join(__dirname, 'public', 'dose_meds.json');
@@ -76,6 +77,14 @@ router.get('/informational-videos', async (req, res) => {
         const randomIndex = Math.floor(Math.random() * videos.length);
         res.json(videos[randomIndex]);
     } catch (error) { res.status(500).json({ error: 'Unable to fetch videos' }); }
+});
+
+router.get('/newsletters', async (req, res) => {
+    try 
+    {
+        const newsletters = await Newsletter.find();
+        res.json(newsletters);
+    } catch (error) { res.status(500).json({ error: 'Unable to fetch newsletters' }); }
 });
 
 router.post('/medicine-safety', async (req, res) => {
