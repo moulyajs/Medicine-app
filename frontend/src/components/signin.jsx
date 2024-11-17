@@ -36,6 +36,8 @@ class Login extends Component
                 if(result.data === "Success")
                 {
                     window.localStorage.setItem("isLoggedIn", true);
+                    window.localStorage.setItem("username", username); //save username to local storage
+                  
                     alert('Sign In successful!');
                     this.props.onLoginSuccess();
                     this.setState({ redirect: true });

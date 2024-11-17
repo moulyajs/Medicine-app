@@ -15,9 +15,10 @@ const SearchResults = ({ filteredMedicines, onSelectMedicine, selectedMedicine, 
   }, []);
 
   const handleAddReview = () => {
-    if (newReview && newRating) {
+    const username = window.localStorage.getItem("username"); 
+    if (newReview && newRating && username) {
       const review = {
-        user: "Anonymous", // Replace with actual user data if available
+        user: username, // Replace with actual user data if available
         comment: newReview,
         rating: newRating
       };
