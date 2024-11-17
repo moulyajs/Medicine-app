@@ -1,6 +1,7 @@
 // src/Home.jsx
 import React,{ Component }from 'react';
 import { Link, Navigate } from 'react-router-dom';
+import FAQ from "./FAQ";
 import './CSS/Home.css'
 
 class HomePage extends Component
@@ -15,7 +16,7 @@ class HomePage extends Component
                 <h1>Welcome to Dr.PillPilot</h1>
                 <p>Your trusted online medicine management system.</p>
                 <SearchBar/> <FeatureButtons/> <FeaturedProducts/> <HealthTips/> 
-                <InformationalVideos/> <ConsultationHistory/> <NewsletterArchive/>
+                <InformationalVideos/> <ConsultationHistory/> <NewsletterArchive/> <FAQ />
             </div>
         );
     }
@@ -45,7 +46,7 @@ class FeatureButtons extends Component
         return(
             <div className="feature-buttons">
                 <Link to="/dosage"><button>Dosage Calculator</button></Link>
-                <Link to="/dosage"><button>Safety Checker</button></Link>
+                <Link to="/safety-checker"><button>Safety Checker</button></Link>
                 <Link to="/specialists"><button>Consultation</button></Link>
             </div>
         );

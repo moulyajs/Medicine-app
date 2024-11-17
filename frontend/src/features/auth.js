@@ -1,4 +1,4 @@
-// backend/auth.js
+// frontend/features/auth.js
 import axios from 'axios';
 
 export const isAuthenticated = async () => {

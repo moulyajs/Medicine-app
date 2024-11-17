@@ -15,6 +15,8 @@ import Cart from "./components/Cart";
 import Specialists from "./components/Specialists";
 import SpecialistDoctors from "./components/SpecialistDoctors";
 import CheckOut from "./components/CheckOut";
+import FAQ from "./components/FAQ";
+import MedicineSafetyChecker from "./components/MedicineSafetyChecker";
 import "./App.css"
 
 class App extends Component 
@@ -63,6 +65,8 @@ class App extends Component
                         <Route path="/specialist/:specialistId" element={this.state.authenticated ? <SpecialistDoctors /> : <Navigate to="/login" />} />
                         <Route path="/cart" element={this.state.authenticated ? <Cart /> : <Navigate to="/login" />} />
                         <Route path="/checkout" element={this.state.authenticated ? <CheckOut /> : <Navigate to="/login" />} />
+                        <Route path="/safety-checker" element={this.state.authenticated ? <MedicineSafetyChecker /> : <Navigate to="/login" />} />
+                        <Route path="/faq" element={this.state.authenticated ? <FAQ /> : <Navigate to="/login" />} />
                     </Routes>
                 </div>
             </Router>

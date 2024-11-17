@@ -93,24 +93,20 @@ class Main extends Component
                 </section>*/}
 
                 <footer className="footer">
+                    <h4 style = {{textAlign: "center"}}> Dr.PillPilot </h4>
                     <div className="footer-links">
                         <div className="link-column">
-                            <h4>Dr.PillPilot</h4>
                             <ul>
                                 <li>Medicine Information</li>
                                 <li>Dosage Calculation</li>
-                                <li>Recommendations</li>
                                 <li>Safety Checks</li>
-                                <li>Consultation</li>
                             </ul>
                         </div>
                         <div className="link-column">
-                            <h4>Purchase Medicines</h4>
                             <ul>
+                                <li>Account</li>
                                 <li>FAQ</li>
-                                <li>Link one</li>
-                                <li>Link two</li>
-                                <li>Link three</li>
+                                <li>Consultation</li>
                             </ul>
                         </div>
                     </div>
