@@ -15,9 +15,10 @@ const SearchResults = ({ filteredMedicines, onSelectMedicine, selectedMedicine, 
   }, []);
 
   const handleAddReview = () => {
-    if (newReview && newRating) {
+    const username = window.localStorage.getItem("username"); 
+    if (newReview && newRating && username) {
       const review = {
-        user: "Anonymous", // Replace with actual user data if available
+        user: username, // Replace with actual user data if available
         comment: newReview,
         rating: newRating
       };
@@ -25,7 +26,7 @@ const SearchResults = ({ filteredMedicines, onSelectMedicine, selectedMedicine, 
     //  selectedMedicine.reviews.push(review);
     //  setNewReview("");
      // setNewRating(5);
-     fetch(`http://localhost:5000/api/medicines/${selectedMedicine.name}/reviews`, {
+     fetch(`http://localhost:9000/api/medicines/${selectedMedicine.name}/reviews`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -86,7 +87,7 @@ const navigate= useNavigate();
         <div className="medicine-info">
           <div className="medicine-header">
             <img
-              src={`http://localhost:5000${selectedMedicine.image}`}
+              src={`http://localhost:9000${selectedMedicine.image}`}
               alt={selectedMedicine.name}
               className="medicine-image"
             />

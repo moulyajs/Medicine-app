@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 const signupModel = require("./models/User");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const cookieParser = require("cookie-parser");
 const app = express();
 const Medicine = require("./models/Medicines");
@@ -28,7 +28,7 @@ mongoose.connect(mongoURI)
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
 
-const PORT = 5000; 
+const PORT = 9000; 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 app.post('/signup', (req, res) => { 

@@ -180,4 +180,5 @@ router.post('/faqs/:id/feedback', async (req, res) => {
     }
 });
 
+
 module.exports = router;

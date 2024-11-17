@@ -62,7 +62,7 @@ class FeaturedProducts extends Component
     }
 
     async componentDidMount() {
-        const response = await fetch('http://localhost:5000/api/featured-meds');
+        const response = await fetch('http://localhost:9000/api/featured-meds');
         const data = await response.json();
         this.setState({ selectedTips: data });
     }
@@ -87,7 +87,7 @@ class HealthTips extends Component
     }
 
     async componentDidMount() {
-        const response = await fetch('http://localhost:5000/api/health-tips');
+        const response = await fetch('http://localhost:9000/api/health-tips');
         const data = await response.json();
         this.setState({ selectedTips: data });
     }
@@ -113,7 +113,7 @@ class InformationalVideos extends Component
     }
 
     async componentDidMount() {
-        const response = await fetch('http://localhost:5000/api/informational-videos');
+        const response = await fetch('http://localhost:9000/api/informational-videos');
         const data = await response.json();
         this.setState({ selectedVideo: data, videoTitle: data.title });
     }

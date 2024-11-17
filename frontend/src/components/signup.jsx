@@ -37,7 +37,7 @@ class SignUp extends Component
             return;
         }
 
-        axios.post('http://localhost:5000/signup', {fullName, email, username, password})
+        axios.post('http://localhost:9000/signup', {fullName, email, username, password})
             .then(() => {
                 alert('Sign up successful!');
                 this.setState({ redirect: true });

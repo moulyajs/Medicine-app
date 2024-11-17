@@ -30,12 +30,14 @@ class Login extends Component
         const { username, password, } = this.state;
 
         axios.defaults.withCredentials = true;
-        axios.post('http://localhost:5000/login', {username, password})
+        axios.post('http://localhost:9000/login', {username, password})
             .then((result) => {
                 console.log("Server response: ", result.data);
                 if(result.data === "Success")
                 {
                     window.localStorage.setItem("isLoggedIn", true);
+                    window.localStorage.setItem("username", username); //save username to local storage
+                  
                     alert('Sign In successful!');
                     this.props.onLoginSuccess();
                     this.setState({ redirect: true });

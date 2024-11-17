@@ -9,7 +9,7 @@ function Search() {
 
   const handleSearch = (value) => {
     if (value.trim()) {
-      fetch(`http://localhost:5000/api/medicines/search?name=${encodeURIComponent(value)}`)
+      fetch(`http://localhost:9000/api/medicines/search?name=${encodeURIComponent(value)}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch search results");
