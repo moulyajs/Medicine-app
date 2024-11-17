@@ -21,7 +21,7 @@ export class ForgotPassword extends Component
         e.preventDefault();
         const { email } = this.state;
         alert("Email sent!!");
-        axios.post('http://localhost:5000/forgot-password', { email })
+        axios.post('http://localhost:9000/forgot-password', { email })
             .then((res) => {
                 if(res.data.Status === "Success") this.setState({redirect: true});
             })
@@ -95,7 +95,7 @@ export class ResetPassword extends Component
         
         if (!id || !token) { console.error("ID or token is missing."); return; }
         
-        axios.post(`http://localhost:5000/reset-password/${id}/${token}`, { newPassword })
+        axios.post(`http://localhost:9000/reset-password/${id}/${token}`, { newPassword })
             .then((res) => {
                 if(res.data.Status === "Success") 
                 {

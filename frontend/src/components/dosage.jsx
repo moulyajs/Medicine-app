@@ -15,7 +15,7 @@ class DosageCalculator extends Component
     {
         axios.defaults.withCredentials = true;
         document.body.classList.add('dose-body');
-        axios.get('http://localhost:5000/api/medications')
+        axios.get('http://localhost:9000/api/medications')
             .then(response => { this.setState({ medications: response.data.medicines, loading: false }); })
             .catch(() => { this.setState({ error: "Unable to fetch dosage data. Please try again later.", loading: false }); });
 

@@ -21,7 +21,7 @@ function MedicineSafetyChecker() {
             setError('');
             setWarnings(null);
 
-            const response = await fetch('http://localhost:5000/api/medicine-safety', {
+            const response = await fetch('http://localhost:9000/api/medicine-safety', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

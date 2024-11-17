@@ -72,7 +72,7 @@ const Cart = () => {
                             <div className="cart-item" key={cartItem._id}>
                                 <div className="cart-product">
                                     <img
-                                        src={`http://localhost:5000${cartItem.image}`}
+                                        src={`http://localhost:9000${cartItem.image}`}
                                         alt={cartItem.name}
                                     />
                                     <div>
@@ -109,7 +109,7 @@ const Cart = () => {
                                 <button className="checkout">Check Out</button>
                             </Link>
                             <div className="main-page">
-                                <Link to="/">
+                                <Link to="/home">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="20"

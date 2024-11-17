@@ -14,7 +14,7 @@ const Specialists = () => {
         // Fetch specialists from API
         const fetchSpecialists = async () => {
             try {
-                const response = await fetch("http://localhost:5000/api/specialists");
+                const response = await fetch("http://localhost:9000/api/specialists");
                 const data = await response.json();
                 setSpecialists(data);
             } catch (error) {
@@ -33,7 +33,7 @@ const Specialists = () => {
                     <div className="specialist-card" key={specialist._id}>
                         <div className="specialist-card-content">
                             <img
-                                src={`http://localhost:5000${specialist.image}`}
+                                src={`http://localhost:9000${specialist.image}`}
                                 alt={specialist.specialty}
                                 className="specialist-card-image"
                             />

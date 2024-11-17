@@ -17,7 +17,7 @@ const FAQ = () => {
   useEffect(() => {
     const fetchFAQs = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/faqs');
+        const response = await axios.get('http://localhost:9000/api/faqs');
         setFaqs(response.data);
         setLoading(false);
       } catch (error) {
@@ -38,12 +38,12 @@ const FAQ = () => {
 
     try {
       // Send feedback to the server
-      await axios.post(`http://localhost:5000/api/faqs/${id}/feedback`, {
+      await axios.post(`http://localhost:9000/api/faqs/${id}/feedback`, {
         helpful: isHelpful,
       });
 
       // Fetch the updated FAQ data from the server to get the new vote counts
-      const updatedFaqs = await axios.get('http://localhost:5000/api/faqs');
+      const updatedFaqs = await axios.get('http://localhost:9000/api/faqs');
       setFaqs(updatedFaqs.data);
 
       // Track this FAQ as voted on by the user
