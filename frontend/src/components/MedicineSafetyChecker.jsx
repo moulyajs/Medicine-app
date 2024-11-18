@@ -52,25 +52,25 @@ function MedicineSafetyChecker() {
                 type="text"
                 placeholder="Medicine Name"
                 value={medicineName}
-                onChange={(e) => setMedicineName(e.target.value)}
+                onChange={(e) => setMedicineName(e.target.value)} required 
             />
             <input
                 type="number"
                 placeholder="Age"
                 value={age}
-                onChange={(e) => setAge(e.target.value)}
+                onChange={(e) => setAge(e.target.value)} required
             />
             <input
                 type="text"
                 placeholder="Allergies (comma-separated)"
                 value={allergies}
-                onChange={(e) => setAllergies(e.target.value)}
+                onChange={(e) => setAllergies(e.target.value)} required 
             />
             <input
                 type="text"
                 placeholder="Health Conditions (comma-separated)"
                 value={healthConditions}
-                onChange={(e) => setHealthConditions(e.target.value)}
+                onChange={(e) => setHealthConditions(e.target.value)} required 
             />
             <button onClick={checkSafety}>Check Safety</button>
 

@@ -11,8 +11,9 @@ const FeaturedMed = require('./models/Products');
 const FAQ = require('./models/tempfaqs');
 const Medication = require('./models/Medication');
 const Newsletter = require("./models/Newsletters");
+const User = require("./models/User");
 
-router.get('/medications', verifyUser, (req, res) => {
+router.get('/medications', (req, res) => {
     const filePath = path.join(__dirname, 'public', 'dose_meds.json');
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
@@ -140,7 +141,7 @@ router.post('/medicine-safety', async (req, res) => {
     }
 });
 
-// POST request to add a new FAQ
+// add a new FAQ
 router.post('/faqs', async (req, res) => {
     try {
         const newFAQ = new FAQ({
@@ -154,7 +155,7 @@ router.post('/faqs', async (req, res) => {
     }
 });
 
-// GET request to retrieve all FAQs
+// retrieve all FAQs
 router.get('/faqs', async (req, res) => {
     try {
         const faqs = await FAQ.find({});
@@ -164,7 +165,7 @@ router.get('/faqs', async (req, res) => {
     }
 });
 
-// POST request to handle feedback on an FAQ
+// handle feedback on an FAQ
 router.post('/faqs/:id/feedback', async (req, res) => {
     try {
         const { id } = req.params;
@@ -189,5 +190,67 @@ router.post('/faqs/:id/feedback', async (req, res) => {
     }
 });
 
+// fetch user profile
+router.get("/account", verifyUser, async (req, res) => {
+    try 
+    {
+        if (!req.user || !req.user.id) 
+            return res.status(400).json({ message: "User is not authenticated or user ID is missing" });
+
+        const user = await User.findById(req.user.id, "-password");
+        if (!user) return res.status(404).json({ message: "User not found" });
+        res.json(user);
+    } 
+    catch (err) 
+    {
+        console.error("Error fetching user:", err);
+        res.status(500).json({ message: "Server error" });
+    }
+});
+
+router.put("/account", verifyUser, async (req, res) => {
+    const { fullName, email, username, age, gender } = req.body;
+
+    try 
+    {
+        const user = await User.findById(req.user.id);
+        if (!user) return res.status(404).json({ message: "User not found" });
+
+        // Update the fields with new values
+        user.fullName = fullName || user.fullName;
+        user.email = email || user.email;
+        user.username = username || user.username;
+        
+        // Explicitly replace age and gender with what the user provides
+        user.age = age !== undefined ? age : user.age;
+        user.gender = gender !== undefined ? gender : user.gender;
+
+        // Save updated user to the database
+        await user.save();
+        res.json({ message: "Profile updated successfully", user });
+    } catch (err) {
+        console.error("Error updating profile:", err);
+        res.status(500).json({ message: "Server error" });
+    }
+});
+
+router.delete("/account", verifyUser, async (req, res) => {
+    try 
+    {
+        const user = await User.findByIdAndDelete(req.user.id);
+
+        if (!user) 
+        {
+            console.error("User not found for deletion");
+            return res.status(404).json({ message: "User not found" });
+        }
+        res.json({ message: "Account deleted successfully" });
+    } 
+    catch (err) 
+    {
+        console.error("Error deleting account:", err);
+        res.status(500).json({ message: "Server error" });
+    }
+});
 
 module.exports = router;

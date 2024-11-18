@@ -15,7 +15,6 @@
 }
 
 .mainpg-body a
-
 {
     color:inherit;
     text-decoration:none;
@@ -139,63 +138,6 @@
     max-width:700px;
     margin:0 auto;
 }
-
-/* Search Tool Section */
-.mainpg-body .search-tool-section
-{
-    padding:60px 50px;
-    background-color:#ffffff;
-    text-align:center;
-    box-shadow:0 4px 8px rgba(0,0,0,0.1);
-    border-radius:10px;
-    max-width:800px;
-    margin:40px auto
-}
-
-.mainpg-body .search-tool-section h3
-{
-    font-size:18px;
-    color:#7f8c8d;
-}
-
-.mainpg-body .search-tool-section h2
-{
-    font-size:26px;
-    color:#2c3e50;
-    margin-bottom:10px;
-}
-
-.mainpg-body .search-tool-section p
-{
-    color:#7f8c8d;
-    margin-bottom:30px;
-}
-
-.mainpg-body .search-form
-{
-    display:flex;
-    flex-direction:column;
-    max-width:500px;
-    margin:0 auto;
-}
-
-.mainpg-body .search-form label
-{
-    font-weight:bold;
-    margin:10px 0 5px;
-    color:#2c3e50;
-}
-
-.mainpg-body .search-form input,.mainpg-body .search-form textarea
-{
-    width:100%;
-    padding:10px;
-    margin-bottom:15px;
-    border:1px solid #ccc;
-    border-radius:5px;
-}
-
-.mainpg-body .search-form textarea { height:100px; }
 
 .mainpg-body .terms
 {

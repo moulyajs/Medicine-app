@@ -60,28 +60,19 @@ const FAQ = () => {
     faq.question.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  if (loading) {
-    return <p>Loading FAQs...</p>;
-  }
+  if (loading) { return <p>Loading FAQs...</p>; }
 
   return (
     <div className="faq-section">
       <h2>Frequently Asked Questions</h2>
       <div className="faq-search">
-        <input
-          type="text"
-          placeholder="Search FAQs..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
+        <input type="text" placeholder="Search FAQs..." value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)} />
       </div>
       <div className="faq-list">
         {filteredFaqs.length > 0 ? (
           filteredFaqs.map((faq, index) => (
-            <div 
-              key={faq._id}
-              className={`faq-item ${activeIndex === index ? "active" : ""}`}
-            >
+            <div key={faq._id} className={`faq-item ${activeIndex === index ? "active" : ""}`} >
               <div className="faq-question" onClick={() => toggleFAQ(index)}>
                 {faq.question}
                 <span>{activeIndex === index ? "-" : "+"}</span>
@@ -90,16 +81,16 @@ const FAQ = () => {
                 <div className="faq-answer">
                   {faq.answer}
                   <div className="faq-feedback">
-                    <button 
+                    <button
                       className={`feedback-button helpful ${userVotes[faq._id] === true ? 'clicked' : ''}`}
-                      onClick={() => submitFeedback(faq._id, true)} 
+                      onClick={() => submitFeedback(faq._id, true)}
                       disabled={userVotes[faq._id] !== undefined}
                     >
                       👍 Helpful ({faq.helpfulCount || 0})
                     </button>
-                    <button 
+                    <button
                       className={`feedback-button not-helpful ${userVotes[faq._id] === false ? 'clicked' : ''}`}
-                      onClick={() => submitFeedback(faq._id, false)} 
+                      onClick={() => submitFeedback(faq._id, false)}
                       disabled={userVotes[faq._id] !== undefined}
                     >
                       👎 Not Helpful ({faq.notHelpfulCount || 0})

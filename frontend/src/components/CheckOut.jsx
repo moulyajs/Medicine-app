@@ -96,6 +96,7 @@ const CheckOut = () => {
                         value={formData.mobile}
                         onChange={handleChange}
                         name="mobile"
+                        maxLength={10}
                         required
                     />
                 </div>
@@ -109,8 +110,7 @@ const CheckOut = () => {
                     ></textarea>
                 </div>
                 <div className="payment-method">
-                    <label>Payment Method</label>
-                    <div>Pay on Delivery</div>
+                    <label>Payment Method: Pay on Delivery</label>
                 </div>
                 <button type="submit" className="confirm-order-btn">
                     Confirm Order

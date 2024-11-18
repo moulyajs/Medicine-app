@@ -11,7 +11,6 @@ class Main extends Component
         super(props);
         this.state = { search: false, buy: false, /*medsubmit: false,*/ authenticated: false }
     }
-    //componentDidMount() { document.body.classList.add('mainpg-body'); }
     componentWillUnmount() { document.body.classList.remove('mainpg-body'); }
 
     async componentDidMount() {
@@ -22,14 +21,12 @@ class Main extends Component
 
     onSearch = () => { this.setState({ search: true, }) };
     onBuy = () => { this.setState({ buy: true, }) };
-    /*onMedSubmit= () => { this.setState({ medsubmit: true, }) };*/
 
     render() 
     {
         const { search, buy, /*medsubmit*/ } = this.state;
         if(search) return ( this.state.authenticated ? <Navigate to="/search-medicine" /> : <Navigate to="/login" /> )
         if(buy) return ( this.state.authenticated ? <Navigate to="/cart" /> : <Navigate to="/login" /> )
-        //if(medsubmit) return ( this.state.authenticated ? <Navigate to="/search-medicine" /> : <Navigate to="/login" /> )
 
         return (
             <div className="App">
@@ -70,28 +67,6 @@ class Main extends Component
                     </p>
                 </section>
 
-                {/*<section className="search-tool-section">
-                    <h3>Comprehensive Medicine Information</h3>
-                    <h2>Search Tool for Medicines</h2>
-                    <p>
-                        Find detailed information on medicines using our search tool. Simply
-                        enter the name of the medicine and get access to its uses, dosage, side
-                        effects, and more.
-                    </p>
-                    <form className="search-form">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="Your name" required/>
-
-                        <label>Email Address</label>
-                        <input type="email" placeholder="Your email" required/>
-
-                        <label>Message</label>
-                        <input placeholder="Enter the medicine name"></input>
-
-                        <button type="submit" onSubmit={doSubmit}>Submit</button>
-                    </form>
-                </section>*/}
-
                 <footer className="footer">
                     <h4 style = {{textAlign: "center"}}> Dr.PillPilot </h4>
                     <div className="footer-links">
@@ -111,8 +86,8 @@ class Main extends Component
                         </div>
                     </div>
                     <div className="footer-bottom">
-                        <p>&copy; 2023 Company. All rights reserved.</p>
-                        <p>privacy policy | terms of service | cookie settings</p>
+                        <p>&copy; 2024 Company. All rights reserved.</p>
+                        <p>Privacy Policy | Terms of Service | Cookie Settings</p>
                     </div>
                 </footer>
             </div>

@@ -22,9 +22,7 @@ export class ForgotPassword extends Component
         const { email } = this.state;
         alert("Email sent!!");
         axios.post('http://localhost:9000/forgot-password', { email })
-            .then((res) => {
-                if(res.data.Status === "Success") this.setState({redirect: true});
-            })
+            .then((res) => { if(res.data.Status === "Success") this.setState({redirect: true}); })
             .catch((err) => {console.log(err);} )
     };
 
@@ -77,7 +75,6 @@ export class ResetPassword extends Component
     componentDidMount() { document.body.classList.add('passreset-body'); }
 
     componentWillUnmount() { document.body.classList.remove('passreset-body'); }
-
 
     handlePasswordEntry = (e) => {
         const { name, value } = e.target;

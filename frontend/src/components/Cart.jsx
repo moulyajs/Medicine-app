@@ -109,7 +109,7 @@ const Cart = () => {
                                 <button className="checkout">Check Out</button>
                             </Link>
                             <div className="main-page">
-                                <Link to="/">
+                                <Link to="/home">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="20"

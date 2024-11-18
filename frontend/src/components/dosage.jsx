@@ -13,7 +13,7 @@ class DosageCalculator extends Component
 
     componentDidMount() 
     {
-        axios.defaults.withCredentials = true;
+        //axios.defaults.withCredentials = true;
         document.body.classList.add('dose-body');
         axios.get('http://localhost:9000/api/medications')
             .then(response => { this.setState({ medications: response.data.medicines, loading: false }); })
