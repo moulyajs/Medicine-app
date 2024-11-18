@@ -1,0 +1,96 @@
+/* Body styling */
+body.dose-body, body.dosecancer-body
+{
+    background-color: #457b9d;
+    font-family: Arial, sans-serif;
+}
+
+.dose-body .dose-container 
+{
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dose-body .dose-label 
+{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.dosecancer-body .dose-input, .dose-body .dose-input, .dose-body .dose-select 
+{
+    width: 400px;
+    padding: 8px;
+    font-size: 1rem;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+    display: inline-block;
+}
+
+.dose-body input[type = "number"], .dosecancer-body input[type = "number"] { width: 170px; }
+
+.dosecancer-body .dose-input:focus, .dosecancer-body .dose-select:focus, .dose-body .dose-input:focus, .dose-body .dose-select:focus 
+{
+    border-color: #007bff;
+    outline: none;
+}
+
+.dosecancer-body .dose-button 
+{
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #f5f5cd;
+    background-color: #c92abb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.dosecancer-body .dose-button:hover { background-color: #a95ecc; }
+
+/* Text styling */
+.dose-body b,  .dosecancer-body b { color: blue}
+
+.dose-body .dose-warning 
+{
+    color: #d9534f;
+    font-size: 0.95rem;
+}
+
+.dose-body .dose-message 
+{
+    margin-top: 20px;
+    color: red;
+}
+
+/* Cancer calculator specific styling */
+.dosecancer-body .cancer-calculator 
+{
+    max-width: 330px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dosecancer-body .cancer-input-group  { margin-bottom: 10px; }
+
+.dosecancer-body .cancer-heading { color: #333; }
+
+.dosecancer-body .cancer-result { margin-top: 20px; }

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import "./SearchResults.css";
+import React, { useState, useEffect } from "react";
+import "./CSS/SearchResults.css";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -9,10 +9,16 @@ const SearchResults = ({ filteredMedicines, onSelectMedicine, selectedMedicine, 
   const [newReview, setNewReview] = useState("");
   const [newRating, setNewRating] = useState(5);
 
+  useEffect(() => {
+    document.body.classList.add('searchresults-body');
+    return () => { document.body.classList.remove('searchresults-body'); };
+  }, []);
+
   const handleAddReview = () => {
-    if (newReview && newRating) {
+    const username = window.localStorage.getItem("username"); 
+    if (newReview && newRating && username) {
       const review = {
-        user: "Anonymous", // Replace with actual user data if available
+        user: username, // Replace with actual user data if available
         comment: newReview,
         rating: newRating
       };

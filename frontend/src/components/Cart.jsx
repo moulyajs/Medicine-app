@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import "./Cart.css";
+import "./CSS/Cart.css";
 import { addToCart, clearCart, decreaseCart, getTotals, removeFromCart } from "../features/CartSlice";
 import { useEffect } from "react";
 
@@ -11,6 +11,11 @@ const Cart = () => {
     useEffect(() => {
         dispatch(getTotals());
     }, [cart, dispatch]);
+    
+    useEffect(() => {
+        document.body.classList.add('cart-body');
+        return () => { document.body.classList.remove('cart-body'); };
+    }, []);
 
     const handleRemoveFromCart = (cartItem) => {
         dispatch(removeFromCart(cartItem));
@@ -36,7 +41,7 @@ const Cart = () => {
                 <div className="cart-empty">
                     <p>Your cart is currently empty</p>
                     <div className="go-to-main-page">
-                        <Link to="/">
+                        <Link to="/home">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="20"
@@ -104,7 +109,7 @@ const Cart = () => {
                                 <button className="checkout">Check Out</button>
                             </Link>
                             <div className="main-page">
-                                <Link to="/">
+                                <Link to="/home">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="20"

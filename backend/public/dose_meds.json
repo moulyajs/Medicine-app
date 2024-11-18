@@ -1,0 +1,199 @@
+{
+  "medicines": [
+    {
+      "name": "Warfarin",
+      "category": "Blood Thinner",
+      "Adult": {
+        "Venous Thrombosis": "Initially - 2mg-5mg for 2 days, then 2mg-10mg/day",
+        "Stroke & Thromboembolism": "Initially - 2mg-5mg for 2 days, then 2mg-10mg/day",
+        "Post-Myocardial Infarction": "Initially - 2mg-5mg for 2 days, then 2mg-10mg/day"
+      },
+      "Pediatric": {
+        "Thrombosis": "0.1-0.2mg/kg the first day then range between 2mg/kg - 3mg/kg "
+      }
+    },
+    {
+      "name": "Digoxin",
+      "category": "Heart",
+      "Adult": {
+        "Heart Failure": "0.125mg-0.25mg/day PO",
+        "Atrial Fibrillation": "0.01mg - 0.015mg PO initially, later on 0.125mg-0.5mg/day PO"
+      },
+      "Pediatric": {
+        "Premature neonate": {
+            "PO": "1st loading dose, 10-15 mcg/kg; 2nd and 3rd loading doses, 5-7.5 mcg/kg q6-8hr for 2 doses; maintenance: 5-7.5 mcg/kg/day divided q12hr.", 
+            "IV": "1st loading dose, 7.5-12.5 mcg/kg; 2nd and 3rd loading doses, 3.75-6.25 mcg/kg q6-8hr for 2 doses; maintenance: 4-6 mcg/kg/day divided q12hr."
+        },
+        "Full-term neonate": {
+            "PO": "1st loading dose - 12.5-17.5 mcg/kg; 2nd and 3rd loading doses - 6.25-8.75 mcg/kg q6-8hr for 2 doses; maintenance: 6-10 mcg/kg/day divided q12hr.", 
+            "IV": "1st loading dose, 10-15 mcg/kg; 2nd and 3rd loading doses, 5-7.5 mcg/kg q6-8hr for 2 doses; maintenance: 5-8 mcg/kg/day divided q12hr."
+        },
+        "0-2 years": {
+            "PO": "1st loading dose, 17.5-30 mcg/kg; 2nd and 3rd loading doses, 8.75-15 mcg/kg q6-8hr for 2 doses; maintenance: 10-15 mcg/kg/day divided q12hr.", 
+            "IV": "1st loading dose, 15-25 mcg/kg; 2nd and 3rd loading doses, 7.5-12.5 mcg/kg q6-8hr for 2 doses; maintenance: 7.5-12 mcg/kg/day divided q12hr."
+        },
+        "2-5 years": {
+            "PO": "1st loading dose, 15-20 mcg/kg; 2nd and 3rd loading doses, 8.75-10 mcg/kg q6-8hr for 2 doses; maintenance: 7.5-10 mcg/kg/day divided q12hr.", 
+            "IV": "1st loading dose, 12.5-17.5 mcg/kg; 2nd and 3rd loading doses, 6.25-8.75 mcg/kg q6-8hr for 2 doses; maintenance: 6-9 mcg/kg/day divided q12hr."
+        },
+        "5-10 years": {
+            "PO": "1st loading dose, 10-17.5 mcg/kg; 2nd and 3rd loading doses, 5-8.75 mcg/kg q6-8hr for 2 doses; maintenance: 5-10 mcg/kg/day divided q12hr.", 
+            "IV": "1st loading dose, 7.5-15 mcg/kg; 2nd and 3rd loading doses, 3.75-7.5 mcg/kg q6-8hr for 2 doses; maintenance: 4-8 mcg/kg/day divided q12hr."
+        },
+        "10-18 years": {
+            "PO": "1st loading dose, 5-7.5 mcg/kg; 2nd and 3rd loading doses, 2.5-3.75 mcg/kg q6-8hr for 2 doses; maintenance: 2.5-5 mcg/kg/day.", 
+            "IV": "1st loading dose, 4-6 mcg/kg; 2nd and 3rd loading doses, 2-3 mcg/kg q6-8hr for 2 doses; maintenance: 2-3 mcg/kg/day."
+        }
+      }
+    },
+    {
+      "name": "Theophylline",
+      "category": "Lung",
+      "Adult": {
+        "Chronic Obstructive Pulmonary Disease": "200mg-600mg/day",
+        "Asthma / Acute Bronchospasm": "200mg-400mg/day"
+      },
+      "Pediatric": {
+        "Basic statement": "5-7mg/kg PO ",
+        "1.5-6 months": "Increase to 10 mg/kg PO in divided doses per day",
+        "6-12 months": "Increase to 12-18 mg/kg PO thrice/day",
+        "1-9 years": "Increase to 8 mg/kg PO thrice/day",
+        "9-12 years": "Increase to 6.4 mg/kg PO thrice/day",
+        "12-18 years": "Increase to 5.6 mg/kg PO thrice/day"
+      }
+    },
+    {
+      "name": "Carbamazepine",
+      "category": "Neuropsychiatry",
+      "Adult": {
+        "Epilepsy": "200mg-1600mg/day",
+        "Bipolar Disorder": "200mg-1200mg/day",
+        "Trigeminal Neuralgia":"Initially 200 mg twice/day followed by 200mg/day increments but not to exceed 1200mg/day",
+        "Postherpatic Neuralgia":"Start from 100-200mg/day and slowly increase. Maximum upto 1200mg/day"
+      },
+      "Pediatric": {
+        "Less than 6 years": "Initially 10-20 mg/kg PO twice a day, then slowly increase. Maximum upto 35mg/kg/day",
+        "6-12 years": "Initially 50 mg/kg PO twice a day, then slowly increase. Maximum upto 1000mg/day",
+        "12-18 years": "Initially 200 mg/kg PO twice a day, then slowly increase. Maximum upto 1200mg/day"
+      }
+    },
+    {
+      "name": "Cyclosporine",
+      "category": "Immunosuppressant",
+      "Adult": {
+        "Organ Transplant Rejection": "2.5mg-15mg/kg/day",
+        "Psoriasis": "1.5mg-5mg/kg/day",
+        "Rheumatoid Arthritis":"1-3mg/kg/day"
+      },
+      "Pediatric": {
+        "Organ Transplant Rejection": "2.5mg-15mg/kg twice/day"
+      }
+    },
+    {
+      "name": "Lithium carbonate",
+      "category": "Neuropsychiatry",
+      "Adult": {
+        "Bipolar Disorder": "900mg-2400mg/day"
+      },
+      "Pediatric": {
+        "Bipolar Disorder": "600mg-1200mg/day"
+      }
+    },
+    {
+      "name": "Amiodarone",
+      "category": "Heart",
+      "Adult": {
+        "Arrhythmia": "100mg-200mg/day" 
+      },
+      "Pediatric": {
+        "Arrhythmia": "10mg-15mg/day"
+      }
+    },
+    {
+      "name": "Clomipramine",
+      "category": "Neuropsychiatry",
+      "Adult": {
+        "Obsessive-Compulsive Disorder": "Initially 25mg/day. Gradually increase 100mg-250mg/day"
+      }
+    },
+    {
+      "name": "Cyclophosphamide",
+      "category": "Immunosuppressant",
+      "Adult": {
+        "Non-Hodgkin Lymphoma": "600-1500mg/m^2 IV",
+        "Breast Cancer":"600mg/m2 IV",
+        "Lupus Nephritis": "Low-dose: 500 mg IV every 2 weeks for 6 doses plus corticosteroids\nHigh-dose: 500-1000 mg/m² IV monthly for 6 doses plus corticosteroids",
+        "Juvenile Idiopathic Arthritis": "10mg/kg/day",
+        "Nephrotic Syndrome": "2-3 mg/kg/day for up to 12 weeks when corticosteroids unsuccessful" 
+      },
+      "Pediatric": {
+        "Malignant Diseases": "50-100mg/m²",
+        "Juvenile Idiopathic Arthritis": "10 mg/kg IV every 2 weeks",
+        "Systemic Lupus Erythematosus": "500-750 mg/m² IV monthly"
+      }
+    },
+    {
+      "name": "Levothyroxine",
+      "category": "Thyroid",
+      "Adult": {
+        "Hypothyroidism": "25mcg-300mcg/day",
+        "Myxedema Coma":"500mcg-800mcg/day IV"
+      },
+      "Pediatric": {
+        "0-3 months": "10-15 mcg/kg/day PO",
+        "3-6 months": "8-10 mcg/kg/day",
+        "6-12 months": "6-8 mcg/kg/day PO",
+        "1-5 years": "5-6 mcg/kg/day PO",
+        "6-12 years": "4-5 mcg/kg/day PO",
+        "12-18 years": "2-3 mcg/kg/day PO"
+      }
+    },
+    {
+      "name": "Vancomycin",
+      "category": "Antibiotic",
+      "Adult": {
+        "Bacterial Infections": "15mg/kg-20mg/kg every 8-12 hours",
+        "MRSA": "15mg/kg-20mg/kg every 8-12 hours",
+        "Lower Respiratory Tract Infections":"2 g divided either as 500 mg q6hr or 1 gram q12hr",
+        "Infective Endocarditis": "2 g divided either as 500 mg q6hr or 1 gram q12hr"
+      },
+      "Pediatric": {
+        "MRSA": "10mg/kg twice a day",
+        "Bacterial Meningitis": "15-20mg/kg IV twice/day"
+      }
+    },
+    {
+      "name": "Tacrolimus",
+      "category": "Immunosuppressant",
+      "Adult": {
+        "Organ Transplant Rejection": "0.5mg-1mg twice daily",
+        "Cancer": "5mg-10mg/day"
+      },
+      "Pediatric": {
+        "Organ Transplant Rejection": "0.075 mg/kg twice/day"
+      }
+    },
+    {
+      "name": "Cisplatin",
+      "category": "Anti-cancer",
+      "Adult": {
+        "Cancers": "20mg-100mg/m2/day"
+      }
+    },
+    {
+      "name": "Flecainide",
+      "category": "Heart",
+      "Adult": {
+        "Arrhythmia": "100mg-200mg every 8-12 hours"
+      },
+      "Pediatric": {
+        "Less than 6 months": "50 mg/m² PO thrice/day",
+        "6 months-18 years": "100 mg/m² PO thrice/day"
+      }
+    },
+    {
+      "name": "Docetaxel",
+      "category": "Anti-cancer"
+    }
+  ]
+}

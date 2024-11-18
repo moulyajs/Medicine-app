@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { clearCart } from "../features/CartSlice"; // Import the action
 import { useNavigate } from "react-router-dom"; // Import useNavigate
-import "./CheckOut.css"; // Add your styles for the checkout page
+import "./CSS/CheckOut.css"; // Add your styles for the checkout page
 
 const CheckOut = () => {
     const [formData, setFormData] = useState({
@@ -10,6 +10,12 @@ const CheckOut = () => {
         mobile: "",
         address: "",
     });
+
+    useEffect(() => {
+        document.body.classList.add('checkout-body');
+        return () => { document.body.classList.remove('checkout-body'); };
+    }, []);
+
     const [modalVisible, setModalVisible] = useState(false); // For showing the confirmation modal
     const dispatch = useDispatch();
     const navigate = useNavigate(); // Use useNavigate hook for navigation
@@ -22,7 +28,7 @@ const CheckOut = () => {
         });
     };
 
-    const handleConfirmOrder = () => {
+    /*const handleConfirmOrder = () => {
         // Clear the cart after confirming the order
         dispatch(clearCart());
         
@@ -33,7 +39,7 @@ const CheckOut = () => {
         setTimeout(() => {
             navigate("/cart");
         }, 5000); // You can set a delay if you want to show the modal before redirecting
-    };
+    };*/
 
     const handleClose = () => {
         // Close the checkout and navigate back to the cart without placing the order
@@ -49,11 +55,30 @@ const CheckOut = () => {
         });
         navigate("/cart");
     };
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Prevent default form submission
+        if (!formData.name || !formData.mobile || !formData.address) {
+            alert("Please fill out all the required fields.");
+            return;
+        }
+    
+        // Clear the cart after confirming the order
+        dispatch(clearCart());
+    
+        // Show the confirmation modal
+        setModalVisible(true);
+    
+        // Redirect back to the cart page after a delay (optional)
+        setTimeout(() => {
+            navigate("/cart");
+        }, 5000); // You can set a delay if you want to show the modal before redirecting
+    };
+    
 
     return (
         <div className="checkout-container">
             <h2>Checkout</h2>
-            <form className="checkout-form">
+            <form className="checkout-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label>Name</label>
                     <input
@@ -71,6 +96,7 @@ const CheckOut = () => {
                         value={formData.mobile}
                         onChange={handleChange}
                         name="mobile"
+                        maxLength={10}
                         required
                     />
                 </div>
@@ -84,10 +110,9 @@ const CheckOut = () => {
                     ></textarea>
                 </div>
                 <div className="payment-method">
-                    <label>Payment Method</label>
-                    <div>Pay on Delivery</div>
+                    <label>Payment Method: Pay on Delivery</label>
                 </div>
-                <button type="button" className="confirm-order-btn" onClick={handleConfirmOrder}>
+                <button type="submit" className="confirm-order-btn">
                     Confirm Order
                 </button>
             </form>

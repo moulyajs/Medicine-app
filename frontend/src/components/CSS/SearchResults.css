@@ -1,0 +1,230 @@
+.searchresults-body .search-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+
+}
+
+.searchresults-body .filtered-medicines {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.searchresults-body .filtered-medicine-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.searchresults-body .filtered-medicine-item:hover {
+  background-color: #f0f0f0;
+}
+
+.searchresults-body .medicine-info {
+  display: flex;
+  flex-direction: column;
+  width: 1100px;
+  height: 1200px;
+  max-width: 1100px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 10px;
+  background-color: #ffffff;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.searchresults-body .medicine-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchresults-body .medicine-image {
+  flex: 1;
+  max-width: 300px;
+  margin-left: 100px;
+}
+
+.searchresults-body .medicine-details {
+  flex: 2;
+  padding-left: 20px;
+  margin-left: 100px;
+}
+
+.searchresults-body .medicine-details h3,
+h4 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.searchresults-body .medicine-details .price {
+  font-size: 20px;
+  color: #4CAF50;
+  margin-top: 5px;
+}
+
+.searchresults-body .medicine-details .quantity {
+  font-size: 16px;
+  color: #666;
+  margin-top: 8px;
+}
+
+.searchresults-body .medicine-extra-info {
+  margin-top: 20px;
+  background-color: #ffffff;
+}
+
+.searchresults-body .medicine-extra-info h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  color: #333;
+}
+
+.searchresults-body .medicine-extra-info p,
+.searchresults-body .medicine-extra-info ul {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+  margin-left: 100px;
+}
+
+.searchresults-body .medicine-extra-info ul {
+  padding-left: 20px;
+  margin-left: 100px;
+}
+
+.searchresults-body .add-to-cart-button {
+  background-color: #28a745;
+  /* Green background */
+  color: white;
+  /* White text */
+  border: none;
+  /* No border */
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 10px 15px;
+  /* Padding */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  margin-top: 25px;
+  /* Space above the button */
+}
+
+.searchresults-body .add-to-cart-button:hover {
+  background-color: #218838;
+  /* Darker green on hover */
+}
+
+.searchresults-body .add-review {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.searchresults-body .add-review h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.searchresults-body .add-review textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.searchresults-body .add-review select {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.searchresults-body .add-review button {
+  background-color: #007bff;
+  /* Blue background */
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.searchresults-body .add-review button:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}
+
+/* Displayed Reviews Styling */
+
+.searchresults-body .medicine-extra-info .reviews-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.searchresults-body .medicine-extra-info .reviews-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.searchresults-body .medicine-extra-info .reviews-list li:last-child {
+  border-bottom: none;
+}
+
+.searchresults-body .review-user {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #555;
+}
+
+.searchresults-body .review-comment {
+  font-size: 16px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.searchresults-body .review-rating {
+  display: inline-flex;
+  color: gold;
+  font-size: 16px;
+}
+
+.searchresults-body .star {
+  color: gold;
+  font-size: 1.2em;
+  margin-right: 2px;
+}
+
+.searchresults-body .add-review {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.searchresults-body .button-group {
+  display: flex;
+  gap: 10px;
+  /* Space between buttons */
+  margin-top: 25px;
+  /* Space above the button group */
+}

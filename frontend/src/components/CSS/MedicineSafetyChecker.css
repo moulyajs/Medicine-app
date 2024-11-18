@@ -1,0 +1,125 @@
+.safetychecker-body .medicine-safety-checker 
+{
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f9fc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+.safetychecker-body .medicine-safety-checker h2 
+{
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.safetychecker-body .medicine-safety-checker input,
+.safetychecker-body .medicine-safety-checker button 
+{
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    margin-top: 0.75rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.safetychecker-body .medicine-safety-checker button 
+{
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.safetychecker-body .medicine-safety-checker button:hover { background-color: #0056b3; }
+
+.safetychecker-body .error-message 
+{
+    color: #e74c3c;
+    font-weight: 500;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.safetychecker-body .warnings 
+{
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #eef9f1;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+}
+
+.safetychecker-body .warnings h3 
+{
+    color: #388e3c;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.safetychecker-body .warnings h4,
+.safetychecker-body .toggle-section 
+{
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.safetychecker-body .highlight-warning 
+{
+    color: red;
+    font-weight: bold;
+}
+
+.safetychecker-body .pregnancy-warning,
+.safetychecker-body .breastfeeding-warning 
+{
+    color: #e42df1; /* Default text color */
+    font-weight: normal;
+}
+
+.safetychecker-body .consult-message 
+{
+    margin-top: 20px;
+    color: rgb(244, 76, 76);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.safetychecker-body .interaction-warnings 
+{
+    font-weight: bold;
+    color: #6a6764;
+    font-size: 1.1rem;
+}
+
+.safetychecker-body .storage-instructions 
+{
+    color: #6e6963;
+    font-size: 1.1rem;
+}
+
+.safetychecker-body .show-more-button 
+{
+    background-color: #15e6af;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.safetychecker-body .show-more-button:hover { background-color: #15abab; }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./SpecialistDoctors.css";
+import "./CSS/SpecialistDoctors.css";
 
 const SpecialistDoctors = () => {
     const { specialistId } = useParams();
@@ -10,6 +10,11 @@ const SpecialistDoctors = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [modalVisible, setModalVisible] = useState(false);
+
+    useEffect(() => {
+        document.body.classList.add('specialistdoctors-body');
+        return () => { document.body.classList.remove('specialistdoctors-body'); };
+    }, []);
 
     useEffect(() => {
         // Fetch doctors by specialist

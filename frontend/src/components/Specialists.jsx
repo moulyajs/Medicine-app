@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./Specialists.css"; // Add your CSS file for styling
+import "./CSS/Specialists.css"; // Add your CSS file for styling
 
 const Specialists = () => {
     const [specialists, setSpecialists] = useState([]);
+
+    useEffect(() => {
+        document.body.classList.add('specialists-body');
+        return () => { document.body.classList.remove('specialists-body'); };
+    }, []);
 
     useEffect(() => {
         // Fetch specialists from API
