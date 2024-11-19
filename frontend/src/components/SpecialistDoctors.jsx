@@ -84,6 +84,9 @@ const SpecialistDoctors = () => {
                         type="text"
                         value={phone}
                         className="phone"
+                        pattern="\d{10}" 
+                        maxLength="10"
+                        title="Mobile number must be exactly 10 digits."
                         onChange={(e) => setPhone(e.target.value)}
                         required
                     />

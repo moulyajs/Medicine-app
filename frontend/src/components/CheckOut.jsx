@@ -96,7 +96,10 @@ const CheckOut = () => {
                         value={formData.mobile}
                         onChange={handleChange}
                         name="mobile"
-                        maxLength={10}
+                         pattern="\d{10}" 
+                        maxLength="10"
+                        title="Mobile number must be exactly 10 digits."
+
                         required
                     />
                 </div>

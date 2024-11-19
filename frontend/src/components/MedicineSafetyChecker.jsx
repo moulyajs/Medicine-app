@@ -58,6 +58,7 @@ function MedicineSafetyChecker() {
                 type="number"
                 placeholder="Age"
                 value={age}
+                min={1}
                 onChange={(e) => setAge(e.target.value)} required
             />
             <input

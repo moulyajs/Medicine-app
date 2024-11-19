@@ -32,7 +32,7 @@ class Login extends Component
         axios.defaults.withCredentials = true;
         axios.post('http://localhost:9000/login', {username, password})
             .then((result) => {
-                console.log("Server response: ", result.data);
+                //console.log("Server response: ", result.data);
                 if(result.data === "Success")
                 {
                     window.localStorage.setItem("isLoggedIn", true);

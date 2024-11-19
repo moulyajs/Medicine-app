@@ -14,6 +14,8 @@ class SignUp extends Component
             confirmPassword: '', passwordTooltip: true, redirect: false, goToMain: false,};
 
         this.passwordRegex = /^[A-Za-z0-9_@]{8,}$/; 
+       this.emailRegex =/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$/;
+
     }
 
     componentDidMount() { document.body.classList.add('signup-body'); }
@@ -25,11 +27,18 @@ class SignUp extends Component
 
         const { password, confirmPassword, fullName, email, username } = this.state;
 
+       if(!this.emailRegex.test(email)) 
+            {
+                alert("Not a valid email!!\nFormat: abc@example.com");
+                return;
+            }
+
         if (!this.passwordRegex.test(password)) 
         {
             alert('Password must be at least 8 characters long and can contain letters, numbers, underscores, and "@".');
             return;
         }
+       
 
         if (password !== confirmPassword) 
         {
